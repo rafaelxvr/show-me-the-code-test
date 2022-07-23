@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.0310" tests="6" failures="6">
+  <testsuite name="Root Suite" timestamp="2022-07-23T22:42:08" tests="0" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Teste Chamada" timestamp="2022-07-23T22:42:08" tests="0" file="C:\Project\show-me-the-code-test\api\tests\Chamada.test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Chamada válida" timestamp="2022-07-23T22:42:08" tests="1" file="C:\Project\show-me-the-code-test\api\tests\Chamada.test.js" time="0.0040" failures="0">
+    <testcase name="Teste Chamada Chamada válida Deve possuir valores válidos" time="0.0010" classname="Deve possuir valores válidos">
+    </testcase>
+  </testsuite>
+  <testsuite name="Chamada inválida" timestamp="2022-07-23T22:42:08" tests="1" file="C:\Project\show-me-the-code-test\api\tests\Chamada.test.js" time="0.0000" failures="3">
+    <testcase name="Teste Chamada Chamada inválida Deve possuir valores inválidos" time="0.0000" classname="Deve possuir valores inválidos">
+    </testcase>
+    <testcase name=" Retorna o valor da tarifa COM plano" time="0.0170" classname="Retorna o valor da tarifa COM plano">
+      <failure message="The expression evaluated to a falsy value:
+
+  assert.ok(caseResponse.isOk)
+" type="AssertionError"><![CDATA[AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert.ok(caseResponse.isOk)
+
+    at Context.<anonymous> (tests\ObterCustoChamada.test.js:30:16)]]></failure>
+    </testcase>
+    <testcase name=" Retorna o valor da tarifa SEM plano" time="0.0010" classname="Retorna o valor da tarifa SEM plano">
+      <failure message="The expression evaluated to a falsy value:
+
+  assert.ok(caseResponse.isOk)
+" type="AssertionError"><![CDATA[AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert.ok(caseResponse.isOk)
+
+    at Context.<anonymous> (tests\ObterCustoChamada.test.js:56:16)]]></failure>
+    </testcase>
+    <testcase name=" Retorna o valor da tarifa ZERO quando não ultrapassa os minutos do plano" time="0.0020" classname="Retorna o valor da tarifa ZERO quando não ultrapassa os minutos do plano">
+      <failure message="The expression evaluated to a falsy value:
+
+  assert.ok(caseResponse.isOk)
+" type="AssertionError"><![CDATA[AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert.ok(caseResponse.isOk)
+
+    at Context.<anonymous> (tests\ObterCustoChamada.test.js:81:16)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Teste plano" timestamp="2022-07-23T22:42:09" tests="0" file="C:\Project\show-me-the-code-test\api\tests\Plano.test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Plano válido" timestamp="2022-07-23T22:42:09" tests="1" file="C:\Project\show-me-the-code-test\api\tests\Plano.test.js" time="0.0010" failures="1">
+    <testcase name="Teste plano Plano válido Deve possuir um nome válido" time="0.0000" classname="Deve possuir um nome válido">
+      <failure message="Plano is not a constructor" type="TypeError"><![CDATA[TypeError: Plano is not a constructor
+    at Context.<anonymous> (tests\Plano.test.js:10:31)
+    at process.processImmediate (node:internal/timers:471:21)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Plano inválido" timestamp="2022-07-23T22:42:09" tests="1" file="C:\Project\show-me-the-code-test\api\tests\Plano.test.js" time="0.0000" failures="1">
+    <testcase name="Teste plano Plano inválido Deve possuir um nome inválido" time="0.0000" classname="Deve possuir um nome inválido">
+      <failure message="Plano is not a constructor" type="TypeError"><![CDATA[TypeError: Plano is not a constructor
+    at Context.<anonymous> (tests\Plano.test.js:24:31)
+    at process.processImmediate (node:internal/timers:471:21)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Teste Tarifa" timestamp="2022-07-23T22:42:09" tests="0" file="C:\Project\show-me-the-code-test\api\tests\Tarifa.test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Tarifa válida" timestamp="2022-07-23T22:42:09" tests="1" file="C:\Project\show-me-the-code-test\api\tests\Tarifa.test.js" time="0.0010" failures="1">
+    <testcase name="Teste Tarifa Tarifa válida Deve possuir valores válidos" time="0.0000" classname="Deve possuir valores válidos">
+      <failure message="The expression evaluated to a falsy value:
+
+  assert.ok(novaTarifa.isValid())
+" type="AssertionError"><![CDATA[AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert.ok(novaTarifa.isValid())
+
+    at Context.<anonymous> (tests\Tarifa.test.js:19:20)
+    at process.processImmediate (node:internal/timers:471:21)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Tarifa inválida" timestamp="2022-07-23T22:42:09" tests="1" file="C:\Project\show-me-the-code-test\api\tests\Tarifa.test.js" time="0.0010" failures="0">
+    <testcase name="Teste Tarifa Tarifa inválida Deve possuir valores inválidos" time="0.0000" classname="Deve possuir valores inválidos">
+    </testcase>
+  </testsuite>
+</testsuites>
