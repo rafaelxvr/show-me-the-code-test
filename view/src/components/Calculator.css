@@ -1,0 +1,163 @@
+.calculator__wrapper {
+    background-color: #fff;
+    max-height: 800px;
+    height: 85%;
+    border: 2px solid black;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0;
+}
+
+.calculator__title {
+    text-align: center;
+    color: black;
+    position: flex;
+}
+
+.calculator__body {
+    padding: 20px 70px;
+    border-radius: 15px;
+    background: linear-gradient(90deg, rgb(39, 38, 38) 0%, rgb(36, 33, 33) 100%);
+}
+
+.calculator__body h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 800;
+    text-align: center;
+    color: #D2DAF5;
+    font-size: 3rem;
+    margin-bottom: 5px;
+}
+
+.calculator__line {
+    height: 2px;
+    background-color: #3E445B;
+}
+
+.calculator__body {
+    margin-top: 5px;
+}
+
+.fields {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 1.2rem;
+    color: #D2DAF5;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+input, textarea, select {
+    width: 100%;
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+    font-size: 1.2rem;
+    padding-left: 15px;
+}
+
+input {
+    height: 45px;
+}
+
+textarea {
+    height: 190px;
+    resize: none;
+    padding-top: 10px;
+}
+
+.calculator__btn {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.calculator__btn button{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 800;
+    font-size: 1.3rem;
+    padding: 5px 50px;
+    color: #fff;
+    background-color: #596b97;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.result__wrapper{
+    padding: 30px 70px;
+    border-radius: 15px;
+    background-color: #596b97;
+    margin-top: 20px;
+    height: 150px;
+    position: center;
+    margin: 100px 10px 10px 20px;
+}
+
+.header_result {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: #ccc;
+}
+
+.result__ComPlano {
+    margin-top: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 800;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #ccc
+}
+
+.result__SemPlano {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 800;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+.calculator__error {
+    color: rgb(240, 47, 47);
+}
+
+@media only screen and (min-width: 1200px) {
+    .calculator__wrapper {
+      width: 100%;
+    }
+
+    .calculator__title {
+        font-size: 24px;
+    }
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    .calculator__body {
+      display: flex;
+    }
+
+    .calculator__title {
+        font-size: 18px;
+        width: flex;
+        height: 50px;
+    }
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    .calculator__body {
+        margin-bottom: 2rem;
+    }
+
+    .calculator__title {
+        font-size: 14px;
+        width: flex;
+        height: 70px;
+    }
+}
