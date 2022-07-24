@@ -5,6 +5,9 @@ const { herbarium } = require('@herbsjs/herbarium');
 
 const dependency = {TarifaRepository: require('../../repository/db/TarifaRepository')};
 
+/** Um função de caso de uso que retorna o custo da chamada baseado na sua origem, destino, duração e plano telefônico
+ * Injection e TarifaRepository - Este caso de uso recebe uma injeção de dependência.
+ */
  const ObterCustoChamadas = (injection) =>  
   usecase('Obtém custo de chamada por plano e DDD', {
     request: {

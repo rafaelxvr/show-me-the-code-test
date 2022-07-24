@@ -3,7 +3,12 @@ const dependency = {
     ObterCustoChamadas: require('../domain/usecases/ObterCustoChamada').ObterCustoChamadas
 } 
 
-/* Uma rota da API que é utilizada para calcular o custo de uma chamada. */
+/* Uma rota da API, com uma requisição GET que é utilizada para calcular o custo de uma chamada. 
+     *    parameters: origem: req.query.origem,
+            destino: req.query.destino,
+            duracao: req.query.duracao,
+            plano: req.query.plano*/
+            
 router.get('/', async (req, res) => {
         const di = Object.assign({}, dependency, req.injection)
         const usecase = di.ObterCustoChamadas(req.injection)

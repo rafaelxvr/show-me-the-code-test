@@ -11,7 +11,8 @@ const validationCalc = yup.object().shape({
     .notOneOf([yup.ref('destino'), null], "Os campos origem e destino não podem ser iguais"),
   destino: yup.string().required("O campo Destino é obrigatório.")
     .notOneOf([yup.ref('origem'), null], "Os campos origem e destino não podem ser iguais"),
-  duracao: yup.number("O campo deve ser um número")
+  duracao: yup.number()
+    .typeError("O campo deve ser um número")
     .required("O campo Duração é obrigatório.")
     .positive("O valor deve ser positivo")
     .integer("O valor deve ser inteiro")

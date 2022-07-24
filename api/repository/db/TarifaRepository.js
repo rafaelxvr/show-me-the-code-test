@@ -3,6 +3,7 @@ const { Tarifa } = require('../../domain/entities/Tarifa')
 const PlanoRepository = require('./PlanoRepository.js')
 const { herbarium } = require('@herbsjs/herbarium')
 
+/* Classe responsável pelo cálculo do custo da tarifa de chamadas baseada no plano e duração da chamada */
 class TarifaRepository {
   constructor(args) {
     this.args = args;
@@ -27,24 +28,17 @@ class TarifaRepository {
       const valorTarifa = this.BuscarValorTarifa(args.origem, args.destino);
       
       const custo = {};
+      custo.origem = args.origem;
+      custo.destino = args.destino;
+      custo.valorPorMinuto = valorTarifa[0].valorMinuto;
+      custo.valorTotalComPlano = 0;
 
-      switch (true) {
-        case (infoPlano[0].minutos > 0 && args.duracao > infoPlano[0].minutos): /* Cálculo COM PLANO e DURACAO ultrapassando o limite*/
-          custo.origem = args.origem;
-          custo.destino = args.destino;
+      if (infoPlano[0].minutos > 0 && args.duracao > infoPlano[0].minutos) {
           let duracaoComPlano = args.duracao - infoPlano[0].minutos;
-          custo.valorPorMinuto = valorTarifa[0].valorMinuto;
           custo.valorTotalComPlano = (((valorTarifa[0].valorMinuto * 0.10) + valorTarifa[0].valorMinuto) * duracaoComPlano);
-          custo.valorTotalSemPlano = (args.duracao * valorTarifa[0].valorMinuto);
-          break;
-        case (args.duracao < infoPlano[0].minutos): /* Cálculo COM PLANO e duração abaixo do limite */
-          custo.origem = args.origem;
-          custo.destino = args.destino;
-          custo.valorPorMinuto = valorTarifa[0].valorMinuto;
-          custo.valorTotalComPlano = 0;
-          custo.valorTotalSemPlano = (args.duracao * valorTarifa[0].valorMinuto)
-          break;
-      };
+      }
+      
+      custo.valorTotalSemPlano = (args.duracao * valorTarifa[0].valorMinuto);
 
       if (typeof custo !== "undefined"){
         return(custo);

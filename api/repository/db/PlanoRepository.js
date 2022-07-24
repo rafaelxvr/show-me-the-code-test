@@ -2,6 +2,7 @@ const { planos } = require('../../config/database')
 const { herbarium } = require('@herbsjs/herbarium')
 const { Plano } = require('../../domain/entities/Plano')
 
+/* Classe que possui um método que retorna a lista de planos existentes*/
 class PlanoRepository {
   BuscarPlano(nome) {
     try {

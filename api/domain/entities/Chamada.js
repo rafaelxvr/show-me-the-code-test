@@ -1,6 +1,7 @@
 const { entity, field } = require('@herbsjs/herbs')
 const { herbarium } = require('@herbsjs/herbarium');
 
+/* Cria uma nova entidade chamada Plano com os campos: origem, destino, duracao, valorPorMinuto e valorTotal. */
 const Chamada = entity('Chamada', {
   origem: field(String, {
     validation: { presence: true, type: String }
