@@ -1,3 +1,4 @@
+![Full-Stack-Image](https://static.thenounproject.com/png/1670308-200.png)
 # Desafio SHOW ME THE CODE - FULL STACK
 
 Este projeto Full-Stack foi criado utilizando a biblioteca Javascript para criação de interfaces React.js (https://pt-br.reactjs.org/docs/getting-started.html)
