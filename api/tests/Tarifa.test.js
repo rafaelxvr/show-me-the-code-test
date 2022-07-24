@@ -1,5 +1,6 @@
 const { Tarifa } = require('../domain/entities/Tarifa')
 const assert = require('assert')
+const { herbarium } = require('@herbsjs/herbarium');
 
 describe('Teste Tarifa', () => {
 
@@ -12,7 +13,7 @@ describe('Teste Tarifa', () => {
             // When
             novaTarifa.origem = "011";
             novaTarifa.destino = "018";
-            novaTarifa.duracao = 150;
+            novaTarifa.duracao = '150';
             novaTarifa.plano = 'FaleMais120'; 
 
             // Then
@@ -29,7 +30,7 @@ describe('Teste Tarifa', () => {
             // When
             novaTarifa.origem = 11;
             novaTarifa.destino = 18;
-            novaTarifa.duracao = 'cento e cinquenta';
+            novaTarifa.duracao = 150;
             novaTarifa.plano = 120;
 
             // Then           

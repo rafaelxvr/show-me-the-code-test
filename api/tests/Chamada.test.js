@@ -1,5 +1,6 @@
-const { Chamada } = require('../domain/entities/Chamada.js')
-const assert = require('assert')
+const { Chamada } = require('../domain/entities/Chamada.js');
+const assert = require('assert');
+const { herbarium } = require('@herbsjs/herbarium');
 
 describe('Teste Chamada', () => {
 
@@ -12,9 +13,9 @@ describe('Teste Chamada', () => {
             // When
             novaChamada.origem = "011";
             novaChamada.destino = "018";
-            novaChamada.valorPorMinuto = 1.90;
-            novaChamada.duracao = 30;
-            novaChamada.valorTotal = 57; 
+            novaChamada.valorPorMinuto = '1.90';
+            novaChamada.duracao = '30';
+            novaChamada.valorTotal = '57'; 
 
             // Then
             assert.ok(novaChamada.isValid())
@@ -30,9 +31,9 @@ describe('Teste Chamada', () => {
             // When
             novaChamada.origem = 11;
             novaChamada.destino = 18;
-            novaChamada.valorPorMinuto = '1.90';
-            novaChamada.duracao = '30';
-            novaChamada.valorTotal = '57'; 
+            novaChamada.valorPorMinuto = 1.90;
+            novaChamada.duracao = 30;
+            novaChamada.valorTotal = 57; 
 
             // Then           
             assert.ok(!novaChamada.isValid())

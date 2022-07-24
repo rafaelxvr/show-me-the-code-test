@@ -20,6 +20,7 @@ class TarifaRepository {
   }
 
   async CalcularPrecoChamada(args) {
+    console.log(args)
     try {
       const Plano = new PlanoRepository();
       const infoPlano = Plano.BuscarPlano(args.plano);
