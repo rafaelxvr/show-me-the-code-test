@@ -1,4 +1,5 @@
-const { entity, field } = require('@herbsjs/herbs')
+const { entity, field } = require('@herbsjs/herbs');
+const { herbarium } = require('@herbsjs/herbarium');
 
 const Plano = entity('Plano', {
   nome: field(String, {
@@ -7,4 +8,7 @@ const Plano = entity('Plano', {
   minutos: field(Number)
 })
 
-module.exports = Plano
+module.exports.Plano =
+  herbarium.entities
+    .add(Plano, 'Plano')
+    .entity
