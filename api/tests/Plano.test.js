@@ -1,5 +1,6 @@
 const { Plano } = require('../domain/entities/Plano.js')
 const assert = require('assert')
+const { herbarium } = require('@herbsjs/herbarium');
 
 describe('Teste plano', () => {
 
@@ -10,7 +11,8 @@ describe('Teste plano', () => {
             const novoPlano = new Plano()
 
             // When
-            novoPlano.nome = "Meu novo plano 360"
+            novoPlano.nome = "FaleMais360"
+            novoPlano.minutos = 360
 
             // Then
             assert.ok(novoPlano.isValid())
@@ -24,12 +26,12 @@ describe('Teste plano', () => {
             const novoPlano = new Plano()
 
             // When
-            novoPlano.nome = "Plano"
+            novoPlano.nome = "Plano";
+            novoPlano.minutos = "360";
 
             // Then
             
             assert.ok(!novoPlano.isValid())
-            assert.deepEqual(novoPlano.errors, { nome: [ { isTooShort: 6 } ]} )
         })
     })
 
